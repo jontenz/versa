@@ -15,40 +15,60 @@
       align-items: center;
       justify-content: center;
     }
+
     .card {
       background: #020617;
       border-radius: 20px;
       padding: 2.5rem 2.75rem;
-      max-width: 640px;
+      max-width: 860px;
       box-shadow: 0 24px 60px rgba(0,0,0,0.6);
       border: 1px solid rgba(148,163,184,0.25);
     }
+
     .logo {
       font-size: 2rem;
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
+      gap: 0.65rem;
     }
-    .logo-dot {
-      width: 14px;
-      height: 14px;
-      border-radius: 999px;
-      background: #f97316;
-      box-shadow: 0 0 20px rgba(248,113,113,0.8);
+
+    .logo-img {
+      height: 46px;
+      width: auto;
+      object-fit: contain;
+      display: inline-block;
+      filter: drop-shadow(0 0 6px rgba(0,0,0,0.35));
     }
+
+    .tagline {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #9ca3af;
+      margin-top: 0.2rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .subline {
+      font-size: 0.9rem;
+      color: #cbd5f5;
+      margin: 0 0 0.75rem;
+    }
+
     h1 {
-      margin: 0.5rem 0 0.75rem;
+      margin: 0.75rem 0 0.75rem;
       font-size: 1.9rem;
     }
+
     p {
-      margin: 0.5rem 0 1.25rem;
+      margin: 0.5rem 0 1.0rem;
       line-height: 1.6;
       color: #cbd5f5;
     }
+
     .pill {
       display: inline-block;
       padding: 0.25rem 0.7rem;
@@ -61,20 +81,87 @@
       color: #e5e7eb;
       margin-bottom: 0.75rem;
     }
-    ul {
-      margin: 0;
+
+    .intro-layout {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .intro-main {
+      flex: 1 1 280px;
+    }
+
+    .intro-main ul {
+      margin: 0 0 0.75rem;
       padding-left: 1.1rem;
       color: #9ca3af;
       font-size: 0.9rem;
     }
-    li { margin: 0.2rem 0; }
+
+    .intro-main li {
+      margin: 0.2rem 0;
+    }
+
+    .intro-profile {
+      flex: 0 0 230px;
+      border-left: 1px solid rgba(148,163,184,0.25);
+      padding-left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .profile-photo {
+      width: 72px;
+      height: 72px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid rgba(148,163,184,0.6);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+      margin-bottom: 0.35rem;
+    }
+
+    .profile-name {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .profile-role {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .profile-text {
+      font-size: 0.9rem;
+      color: #cbd5f5;
+      line-height: 1.5;
+    }
+
+    .profile-link {
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: #e5e7eb;
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      border: 1px solid rgba(148,163,184,0.5);
+      background: rgba(15,23,42,0.8);
+      display: inline-block;
+    }
+
     .cta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 0.75rem;
-      margin-top: 1.75rem;
+      margin-top: 1.25rem;
     }
-    .btn-primary, .btn-ghost {
+
+    .btn-primary,
+    .btn-ghost {
       border-radius: 999px;
       padding: 0.6rem 1.4rem;
       font-size: 0.9rem;
@@ -86,64 +173,193 @@
       justify-content: center;
       gap: 0.35rem;
     }
+
     .btn-primary {
       background: linear-gradient(135deg, #f97316, #fb923c);
       color: #111827;
       font-weight: 600;
     }
-    .btn-primary:hover {
-      filter: brightness(1.05);
-    }
+
     .btn-ghost {
       background: transparent;
       color: #e5e7eb;
       border-color: rgba(148,163,184,0.6);
     }
-    .btn-ghost:hover {
-      background: rgba(15,23,42,0.9);
+
+    .contact-section {
+      margin-top: 2.3rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid rgba(148,163,184,0.35);
     }
-    .tagline {
-      font-size: 0.85rem;
+
+    .contact-heading {
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-sub {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form {
+      margin-top: 0.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem 1rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field-label {
+      font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.12em;
       color: #9ca3af;
     }
-    @media (max-width: 600px) {
-      .card { margin: 1.5rem; padding: 1.8rem; }
-      h1 { font-size: 1.5rem; }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.55rem 0.75rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: #020617;
+      color: #e5e7eb;
+      font-size: 0.9rem;
+    }
+
+    .contact-actions {
+      grid-column: 1 / -1;
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .intro-profile {
+        border-left: none;
+        border-top: 1px solid rgba(148,163,184,0.25);
+        padding-left: 0;
+        padding-top: 1.25rem;
+      }
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <main class="card">
     <div class="logo">
-      <span class="logo-dot"></span>
+      <img src="assets/logo.png" alt="Versa logo" class="logo-img" />
       VERSA
     </div>
+
     <div class="tagline">HubSpot Implementation · CRM Architects</div>
-
-    <h1>Designing CRMs that match the way you actually work.</h1>
-
-    <p>
-      Versa helps growing teams implement and remodel HubSpot so pipelines,
-      data and automations stay simple, clean and scalable. Less admin,
-      more momentum.
+    <p class="subline">
+      Small, dedicated team from New&nbsp;Zealand. We support you with all things HubSpot.
     </p>
 
-    <ul>
-      <li>End-to-end HubSpot onboarding and implementation</li>
-      <li>Pipeline and process design for sales, marketing and service</li>
-      <li>Data migrations, integrations and automations</li>
-    </ul>
+    <div class="intro-layout">
+      <section class="intro-main">
+        <span class="pill">HubSpot Systems · Data · Automation</span>
 
-    <div class="cta-row">
-      <a href="mailto:hello@versa-crm.com?subject=HubSpot%20Implementation%20Enquiry" class="btn-primary">
-        Book a intro call
-      </a>
-      <a href="mailto:hello@versa-crm.com" class="btn-ghost">
-        Email us a brief
-      </a>
+        <h1>Designing CRMs that match the way you actually work.</h1>
+
+        <p>
+          Versa helps growing teams implement and remodel HubSpot so pipelines,
+          data and automations stay simple, clean and scalable. Less admin,
+          more momentum.
+        </p>
+
+        <p><strong>Services we offer:</strong></p>
+        <ul>
+          <li>Integrations (Xero, NetSuite, ERP, CPQ)</li>
+          <li>Custom API integrations (setup & hosting)</li>
+          <li>Import CRM data, email, notes & call history</li>
+          <li>Sales + marketing process mapping & automation</li>
+          <li>Sales, Marketing & Service Hub setup</li>
+          <li>Pipeline redesign and system cleanups</li>
+          <li>Marketing enablement (ads, socials, email, analytics)</li>
+          <li>Reporting & KPI dashboards</li>
+          <li>Full team enablement + training</li>
+        </ul>
+
+        <div class="cta-row">
+          <a href="mailto:hello@versa-crm.com?subject=HubSpot%20Implementation%20Enquiry" class="btn-primary">Book an intro call</a>
+          <a href="mailto:hello@versa-crm.com" class="btn-ghost">Email us a brief</a>
+        </div>
+      </section>
+
+      <aside class="intro-profile">
+        <img src="assets/profile-jonte.jpg" alt="Jonte Marshall" class="profile-photo" />
+        <div class="profile-name">Jonte Marshall</div>
+        <div class="profile-role">HubSpot CRM Specialist</div>
+
+        <p class="profile-text">
+          Based in New Zealand, Jonte helps businesses scale smarter through HubSpot.
+          With a background in sales + EdTech, he focuses on clean, pragmatic,
+          scalable CRM architecture.
+        </p>
+
+        <a class="profile-link" href="https://nz.linkedin.com/in/jonte-marshall-835501190" target="_blank">LinkedIn</a>
+      </aside>
     </div>
+
+    <section class="contact-section" id="contact">
+      <h2 class="contact-heading">Contact us</h2>
+      <p class="contact-sub">Tell us what you’d like help with. We’ll reply same day.</p>
+
+      <form
+        class="contact-form"
+        action="mailto:jontenz@gmail.com?subject=New%20Versa%20Enquiry"
+        method="POST"
+        enctype="text/plain"
+      >
+        <div class="field">
+          <label class="field-label" for="name">Name</label>
+          <input id="name" name="Name" required />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="email">Email</label>
+          <input id="email" type="email" name="Email" required />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="company">Company</label>
+          <input id="company" name="Company" />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="hubspot-status">HubSpot Status</label>
+          <select id="hubspot-status" name="HubSpot Status">
+            <option>Not using HubSpot yet</option>
+            <option>Implementing HubSpot</option>
+            <option>Existing portal – needs optimisation</option>
+            <option>Existing portal – ongoing support</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label class="field-label" for="message">Message</label>
+          <textarea id="message" name="Message" placeholder="How can we help?"></textarea>
+        </div>
+
+        <div class="field full">
+          <button type="submit" class="btn-primary">Send enquiry</button>
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 </html>
