@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Versa – HubSpot CRM Architects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: #020617;
+      border-radius: 20px;
+      padding: 2.5rem 2.75rem;
+      max-width: 640px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+      border: 1px solid rgba(148,163,184,0.25);
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .logo-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      background: #f97316;
+      box-shadow: 0 0 20px rgba(248,113,113,0.8);
+    }
+    h1 {
+      margin: 0.5rem 0 0.75rem;
+      font-size: 1.9rem;
+    }
+    p {
+      margin: 0.5rem 0 1.25rem;
+      line-height: 1.6;
+      color: #cbd5f5;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.6);
+      color: #e5e7eb;
+      margin-bottom: 0.75rem;
+    }
+    ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+    li { margin: 0.2rem 0; }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+    .btn-primary, .btn-ghost {
+      border-radius: 999px;
+      padding: 0.6rem 1.4rem;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #f97316, #fb923c);
+      color: #111827;
+      font-weight: 600;
+    }
+    .btn-primary:hover {
+      filter: brightness(1.05);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: #e5e7eb;
+      border-color: rgba(148,163,184,0.6);
+    }
+    .btn-ghost:hover {
+      background: rgba(15,23,42,0.9);
+    }
+    .tagline {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #9ca3af;
+    }
+    @media (max-width: 600px) {
+      .card { margin: 1.5rem; padding: 1.8rem; }
+      h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      VERSA
+    </div>
+    <div class="tagline">HubSpot Implementation · CRM Architects</div>
+
+    <h1>Designing CRMs that match the way you actually work.</h1>
+
+    <p>
+      Versa helps growing teams implement and remodel HubSpot so pipelines,
+      data and automations stay simple, clean and scalable. Less admin,
+      more momentum.
+    </p>
+
+    <ul>
+      <li>End-to-end HubSpot onboarding and implementation</li>
+      <li>Pipeline and process design for sales, marketing and service</li>
+      <li>Data migrations, integrations and automations</li>
+    </ul>
+
+    <div class="cta-row">
+      <a href="mailto:hello@versa-crm.com?subject=HubSpot%20Implementation%20Enquiry" class="btn-primary">
+        Book a intro call
+      </a>
+      <a href="mailto:hello@versa-crm.com" class="btn-ghost">
+        Email us a brief
+      </a>
+    </div>
+  </main>
+</body>
+</html>
